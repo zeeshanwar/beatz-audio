@@ -861,6 +861,6 @@
         }
 
         .albumcontainer{
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(1, 500px);
         }
     }
