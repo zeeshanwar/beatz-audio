@@ -850,7 +850,7 @@
     }
 
 
-    @media all and (max-width: 800px){
+    @media all and (max-width: 600px){
 
         nav{
             width: fit-content;
