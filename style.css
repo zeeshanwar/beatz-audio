@@ -342,7 +342,7 @@
 
     .albumcontainer {
         display: inline-grid;
-        grid-template-columns: repeat(2, 600px);
+        grid-template-columns: repeat(1, 600px);
         grid-auto-rows: auto;
         grid-gap: 50px;
         justify-content: center;
