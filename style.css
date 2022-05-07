@@ -865,3 +865,11 @@
             grid-template-columns: repeat(1, 500px);
         }
     }
+
+    @media all and (max-width: 1400px)
+    {
+          albumcontainer{
+            grid-template-columns: repeat(1, 600px);
+            }
+    }
+           
