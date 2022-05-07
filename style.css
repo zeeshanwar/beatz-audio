@@ -868,7 +868,7 @@
 
     @media all and (max-width: 1400px)
     {
-          albumcontainer{
+          .albumcontainer{
             grid-template-columns: repeat(1, 600px);
             }
     }
