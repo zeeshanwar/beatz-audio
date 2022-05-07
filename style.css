@@ -857,10 +857,6 @@
             width: fit-content;
         }
 
-        #navright{
-            display: none;
-        }
-
         .albumcontainer{
             grid-template-columns: repeat(1, 500px);
         }
