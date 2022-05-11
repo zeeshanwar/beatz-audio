@@ -59,6 +59,12 @@
         height: 100%; */
     }
 
+   #panelimg {
+        width: 25%;
+        height: 25%;
+    }
+
+
     .maincontents{
         /* width: 80%; */
 /*         border: 3px solid blue; */
