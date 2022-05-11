@@ -494,23 +494,34 @@
         <div class="musicplayer-mid">
             <br>
             <div class="playercontrols">
-                <div class="backwards">
-                    <img src="images/step-backward-svgrepo-com.svg" width="36" height="36" alt="back">
+
+                <div class="backwards" id="previous">
+                    <i class="fa-solid fa-backward-step fa-2x"></i>
                 </div>
-                <div class="playpause">
-                    <img src="images/play-button-svgrepo-com.svg" width="36" height="36" alt="play/pause">
+
+                <div class="playpause" id="masterplay">
+                    <i class="fa-solid fa-circle-play fa-2x"></i>
                 </div>
-                <div class="forwards">
-                    <img src="images/step-forward-svgrepo-com.svg" width="36" height="36" alt="forward">
+                
+                <div class="forwards"id="next">
+                    <i class="fa-solid fa-forward-step fa-2x"></i>
                 </div>
+
             </div>
             <br>
             <div class="playerseeker">
-                00:00
-                <input type="range" id="track-progress-bar">
-                04:36
+                <!-- 00:00 -->
+                <span id="start-min">00</span>:
+                <span id="start-sec">00</span>
+                <input type="range" id="track-progress-bar" value="0">
+                <!-- 04:36 -->
+                <span id="dur-min">00</span>:
+                <span id="dur-sec">00</span>
             </div>
+
+            <br>
         </div>
+        
         <div class="musicplayer-right">
             This is right
         </div>
