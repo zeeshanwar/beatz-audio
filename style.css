@@ -35,7 +35,7 @@
     }
 
     .pagebody{
-        border: 3px solid goldenrod;
+/*         border: 3px solid goldenrod; */
         margin: 5px;
         padding: 5px;
         width: auto;
@@ -61,7 +61,7 @@
 
     .maincontents{
         /* width: 80%; */
-        border: 3px solid blue;
+/*         border: 3px solid blue; */
         margin: 5px;
     }
 
