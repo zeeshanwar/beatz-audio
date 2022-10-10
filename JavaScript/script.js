@@ -1,5 +1,5 @@
 console.log("Welcome to my Music Website");
-// alert ("Welcome to Beatz Audio");
+alert ("Welcome to Beatz Audio");
 
 var pagetitle = document.querySelector('title').innerHTML  
 var crnt_min=document.getElementById("crnt-min");
