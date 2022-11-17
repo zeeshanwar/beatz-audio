@@ -72,7 +72,7 @@ function songdetails() {
         if(audioElement.paused || audioElement.currentTime<=0){
 
             audioElement.play();                                                                        // Playing Song
-            masterplay.innerHTML='<i class="fa-solid fa-circle-pause fa-2x"></i>';                      // Updating Pause Button
+            masterplay.innerHTML='<i class="fa-regular fa-circle-pause fa-2x"></i>';                    // Updating Pause Button
             songdetails();
             music_cover.style.opacity = "1";
             music_cover.classList.add("animate");
