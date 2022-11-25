@@ -28,7 +28,7 @@
     }
 
     body {
-        zoom: 75%;
+        zoom: 70%;
         font-family: Bookman Old Style;
         font-family: 'Sniglet', cursive;
         width: 100%;
@@ -832,10 +832,10 @@
         border-radius: 100px;
         /* border-top-left-radius: 10px;
         border-top-right-radius: 10px; */
-        padding: 10px;
+        padding: 24px;
         margin: 0px 10px 0px 22px;
         height: 100px;
-        width: 96%;
+        width: 95%;
         position: fixed;
         bottom: 10px;
         transition: all 2s;
@@ -902,8 +902,27 @@
     
     .playercontrols {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        align-items: center;
         width: 50%;
+    }
+
+    .centralplayercontrols {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 50%;
+    }
+
+    .shuffletrack{
+        color: #fb4885;
+        color: crimson;
+        /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+        backdrop-filter: blur(10px);
+    }
+
+    #likeheart{
+
     }
     
     .playerseeker{
@@ -928,15 +947,15 @@
     }
 
     #current-songcover{
-        width: 111px;
-        height: 111px;
+        width: 136px;
+        height: 136px;
         cursor: pointer;
         border-radius: 3px;
     }
 
     .currentsongexpand{
-        scale: 3.3;
-        transform: translateY(-36px);
+        scale: 2.8;
+        transform: translateY(-40px);
         border-radius: 5px;
         /* transform: translateX(0px); */
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -991,7 +1010,8 @@
     }
 
     #endspace{
-        padding: 63px;
+        height: 166px;
+        /* padding: 63px; */
         margin: 0px;
         background-color: darkslateblue;
     }
