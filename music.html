@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <script src="https://kit.fontawesome.com/aa04ad0668.js" crossorigin="anonymous"></script> -->
     <script src="https://kit.fontawesome.com/163f58c2ce.js" crossorigin="anonymous" defer></script>
+    <script src="https://use.fortawesome.com/1ce05b4b.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js" defer></script>
     <script src="script.js" defer> </script>
 
 
@@ -1508,19 +1510,37 @@
             <br>
             <div class="playercontrols">
 
-                <div class="cntrlbtn backwards cursor" id="previous">
-                    <i class="fa-solid fa-backward-step fa-2x"></i>
+                <div class="cntrlbtn shuffle cursor">
+                    <i class="fa-solid fa-shuffle fa-2x" id="shuffle"></i>
                 </div>
 
-                <div class="cntrlbtn playpause cursor" id="masterplay">
-                    <i class="fa-solid fa-circle-play fa-2x"></i>
+                <div class="centralplayercontrols">
+
+                    <div class="cntrlbtn backwards cursor" id="previous">
+                        <i class="fa-solid fa-backward-step fa-2x"></i>
+                    </div>
+
+                    <div class="cntrlbtn playpause cursor" id="masterplay">
+                        <i class="fa-solid fa-circle-play fa-3x"></i>
+                    </div>
+
+                    <div class="cntrlbtn forwards cursor" id="next">
+                        <i class="fa-solid fa-forward-step fa-2x"></i>
+                    </div>
+
                 </div>
 
-                <div class="cntrlbtn forwards cursor" id="next">
-                    <i class="fa-solid fa-forward-step fa-2x"></i>
+                <div class="cntrlbtn playbackspeed cursor">
+                    <i class="fa-solid fa-face-smile fa-2x" id="playspeed"></i>
                 </div>
+                
+                <!-- <div class="cntrlbtn likeheart cursor">
+                    <i class="fa-solid fa-gauge-high fa-2x" id="playspeed"></i>
+                    <i class="fa-regular fa-heart fa-2x" id="likeheart"></i>
+                </div> -->
 
             </div>
+
             <br>
             <div class="playerseeker">
                 <!-- 00:00 -->
