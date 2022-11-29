@@ -929,10 +929,11 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        width: 100%;
-        font-family: 'Nunito', cursive;
+        width: 100%; 
+       /*  font-family: 'Nunito', cursive; */
+        font-family: 'Operator Mono', cursive; 
         /* font-family: 'Handlee', cursive; */
-        font-size: 18px;
+        font-size: 21px;
         font-weight: bold;
     }
 
