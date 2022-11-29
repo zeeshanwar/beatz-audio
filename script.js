@@ -106,6 +106,7 @@ function songdetails() {
     document.addEventListener('keypress', function (e) {
         if (e.key == " " || e.code == "Space")   {      
             playpause();
+            e.preventDefault();
         }
     })
 
