@@ -1073,19 +1073,19 @@
         }
     }
 
-    @media all and (max-width: 450px)
+    @media all and (max-width: 450px) and (min-width: 300px)
     {
         .albumcontainer {
             grid-template-columns: repeat(1, 450px);
         }
 
-        .currentsongexpand {
-            scale: none;
-            transform: none;
-        }
-
         .playerseeker {
             width: 60%;
+        }
+
+        .currentsongexpand {
+            scale: 1.7;
+            transform: translateY(-22px);
         }
     }
 
@@ -1102,10 +1102,28 @@
             justify-content: flex-start;
         }
 
+        .artistcontainer{
+            overflow:auto;
+        }
+
         .artistcover img{
             height: 150px;
             width: 150px;
         }
+
+        .albumcontainer {
+            grid-template-columns: repeat(1, 450px);
+        }
+
+        .playerseeker {
+            width: 60%;
+        }
+
+        .currentsongexpand {
+            scale: none;
+            transform: none;
+        }
     }
+
 
 /* End */
