@@ -1,5 +1,5 @@
 console.log("Welcome to my Music Website");
-alert ("Welcome to Beatz Audio");
+// alert ("Welcome to Beatz Audio");
 
 var pagetitle = document.querySelector('title').innerHTML  
 var crnt_min=document.getElementById("crnt-min");
@@ -99,14 +99,16 @@ function songdetails() {
         }
     } 
  
-    masterplay.addEventListener('click', ()=> {
+    masterplay.addEventListener('click', () => {
         playpause();
 })
 
-    document.addEventListener('keypress', function (e) {
+    document.addEventListener('keypress', function (e) 
+    {
         if (e.key == " " || e.code == "Space")   {      
             playpause();
             e.preventDefault();
+
         }
     })
 
@@ -186,7 +188,7 @@ document.getElementById('next').addEventListener('click', ()=>{
 
         if(trackshuffle.classList.contains('shuffletrack'))
         {
-            shuffle();                                                                      // Shuffling  Tracks when Shuffle is on
+            shuffle();                                                                      // Shuffling Tracks when Shuffle is on
         }
 
         audioElement.currentTime = 0;
@@ -261,7 +263,6 @@ trackshuffle.addEventListener('click', ()=> {
     }
 
 
-
 // Like Button
 
 // let likeheart = document.getElementById('likeheart');
@@ -299,21 +300,21 @@ function playbackspeed() {
         if(audioElement.playbackRate == normal)
         {
             // playbackspeed();
-            audioElement.playbackRate = fast;
+            audioElement.playbackRate = fast;                                               // Setting Normal Playback to Fast
             playspeed.classList.remove('fa-face-smile');
             playspeed.classList.add('fa-face-dizzy');
         }
         
         else if(audioElement.playbackRate == fast)
         {
-            audioElement.playbackRate = slow;
+            audioElement.playbackRate = slow;                                               // Setting Fast Playback to Slow
             playspeed.classList.remove('fa-face-dizzy');
             playspeed.classList.add('fa-face-surprise');
         }
         
         else if(audioElement.playbackRate == slow)
         {
-            audioElement.playbackRate = normal;
+            audioElement.playbackRate = normal;                                             // Setting Slow Playback to Normal
             playspeed.classList.remove('fa-face-surprise');
             playspeed.classList.add('fa-face-smile');
         }
@@ -335,43 +336,67 @@ playbackspeed();
 let expanded = 0;
     document.getElementById('current-songcover').addEventListener('click', ()=>{
 
-        if(music_cover.classList.contains('currentsongexpand') == false)
+        if(music_cover.classList.contains('currentsongexpand') == false)                                   // Checking if cover is not expanded
         {
-            music_cover.classList.add('currentsongexpand');
-            document.getElementById('music-album').innerHTML = music_album;
+            music_cover.classList.add('currentsongexpand');                                                // Expanding the cover
+            document.getElementById('music-album').innerHTML = music_album;                                // Displaying Current ALbum on Cover Expansion
             expanded = 1;
             // document.getElementsByClassName('musicplayer-right')[0].innerHTML = "expanded";
         }
 
-        else if(music_cover.classList.contains('currentsongexpand')){
-            music_cover.classList.remove('currentsongexpand');
-            document.getElementById('music-album').innerHTML = '';
+        else if(music_cover.classList.contains('currentsongexpand'))                                      // Checking if cover is expanded
+        {
+            music_cover.classList.remove('currentsongexpand');                                            // Contracting (Unexpanding) the Cover
+            document.getElementById('music-album').innerHTML = '';                                        // Hididng Current Album on Cover Contraction
             expanded = 0;
         }
     })
 
 
 
-// let expanded = 0;
-//     document.getElementById('current-songcover').addEventListener('click', ()=>{
+// Page Color Invertion
 
-//             music_cover.classList.add('currentsongexpand');
-//             expanded = 1;
-//             document.getElementById('music-album').innerHTML = music_album;
-//             // document.getElementsByClassName('musicplayer-right')[0].innerHTML = "expanded";
-//     })
+let invrt = document.getElementById('invrt');
+let rootelement = document.querySelector("*");
+let allimgs = document.getElementsByTagName('img');
 
-//     document.getElementById('current-songcover').addEventListener('dblclick', ()=>{
-        
-//         if(expanded == 1) {
-//             music_cover.classList.remove('currentsongexpand');
-//             document.getElementById('music-album').innerHTML = '';
-//             expanded = 0;
-//             }
-//         // expanded == 0 ? music_cover.classList.add('currentsongexpand') : music_cover.classList.remove('currentsongexpand');
-//     })
+// console.log(allimgs);
+// console.log(rootelement);
+// rootelement.classList.add('invrt');
 
+let inverted = 0;
+invrt.addEventListener('click', ()=>{
 
+    if(inverted == 0)
+    {
+        rootelement.style.filter = "invert(100%)";
+        // rootelement.classList.add('invert');
+        inverted = 1;
+        invrt.children[0].src = "images/lightbulb-regular.svg"
+
+        for(p=0; p<=allimgs.length; p++)
+        {
+            document.getElementsByTagName('img')[p].style.filter = "invert(100%)";
+            // console.log(p);
+            // console.log(document.getElementsByTagName('img')[p]);
+        }
+    }
+    else if (inverted == 1)
+    {
+        rootelement.style.filter = "invert(0%)";
+        // rootelement.classList.remove('invert');
+        inverted = 0;
+        invrt.children[0].src = "images/lightbulb-solid.svg"
+
+        for(p=0; p<=allimgs.length; p++)
+        {
+            document.getElementsByTagName('img')[p].style.filter = "invert(0%)";
+            // console.log(p);
+            // console.log(document.getElementsByTagName('img')[p]);
+        }
+    }
+
+})
 
 
 // Current Duration timer
@@ -457,10 +482,21 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
 })
 
 
+
+
+
+
+
+
+
+
 songobj =   { 
-                songName: music_title,
-                albumName: music_album,
-                artistName: music_artist,
-                filepath: music_filepath,
-                albumart: music_cover.src
-            }
+    songName: music_title,
+    albumName: music_album,
+    artistName: music_artist,
+    filepath: music_filepath,
+    albumart: music_cover.src
+}
+
+
+// console.log(songobj);
