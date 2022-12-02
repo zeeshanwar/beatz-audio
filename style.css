@@ -1,13 +1,24 @@
 /* CSS File */
 
+:root{
+    /* color: var(--invertvalue, purple); */
+}
+
     * {
         margin: 0px;
         padding: 0px;
         /* color: slategray; */
+        /* filter: invert(100%); */
+        color: var(--invertvalue);
         
     }
 
- /* ScrollBar */
+    .invert{
+        filter: invert(100%);
+        /* color: var(--invertvalue); */
+    }
+
+    /* ScrollBar */
 
     ::-webkit-scrollbar {
         width: 10px;
@@ -32,6 +43,7 @@
         font-family: Bookman Old Style;
         font-family: 'Sniglet', cursive;
         width: 100%;
+        /* filter: invert(100%); */
         /* font-family: 'Snippet', sans-serif; */
         /* background: linear-gradient(0deg, purple, yellow); */
         /* background-image: url('images/BG/francesco-ungaro-jqKS0ET-wGE-unsplash.jpg');
@@ -106,7 +118,7 @@
          height: auto;
      }
 
-     nav {
+    nav {
         background-color: #AE4CCF;
         /* border: 2px solid whitesmoke; */
         border-bottom: 2px solid black;
@@ -233,12 +245,11 @@
 
     #navright {
         display: flex;
-        flex-direction: row-reverse;
-        flex-flow: row-reverse;
-        width: 177px;
+        /* flex-flow: row-reverse; */
         /* position: absolute;
         right: 0px;
         margin: 10px; */
+        /* width: 177px; */
     }
 
     .itemright {
@@ -373,10 +384,6 @@
         transition: all 1s;
     }
 
-    /* #songcover:hover{
-        transform: scale(1.1);
-        border-radius: 20px;
-    } */
     .songcontrols {
         width: 100%;
     }
@@ -418,8 +425,6 @@
         /* background-color:azure; */
         background-color: honeydew;
         /* opacity: 0.8; */
-        /* width: 350px;
-        height: 350px; */
         /* background-color:aqua; */
         /* transform: rotate(5deg); */
         /* transform: translateY(5%); */
@@ -497,7 +502,8 @@
 
     #a-length{
         margin: 5px;
-        font-family: 'Snippet', sans-serif;
+        /* font-family: 'Snippet', sans-serif; */
+        font-family: 'Nunito', cursive;
     }
 
     #a-length span{
@@ -523,6 +529,7 @@
         transform: scale(3);
         opacity: 1.0;
     }
+
 
     /* Artist */
 
@@ -670,16 +677,28 @@
         background-color: ghostwhite;
         color: #1DB954;
         transform: scale(1.1);
-        /* letter-spacing: 5px; */
         cursor: pointer;
     }
 
+
     .heading {
+        display: inline-block;
         font-family: Ubuntu;
         font-size: 36px;
-        text-transform: capitalize;
-        margin: 10px;
-        color:#FF7777;
+        text-transform:uppercase;
+        letter-spacing: 8px;
+        padding: 50px;
+        color: #FF7777;
+        transition: all 1s;
+    }
+
+    .heading:hover{
+        letter-spacing: 22px;
+        cursor: grab;
+        /* border: 5px double #FF7777;
+        padding: 100px;
+        border-radius: 10px; */
+
     }
 
 
@@ -872,6 +891,7 @@
     #music-artist{
         text-align: center;
         font-size: 18px;
+        font-weight: normal;
         word-spacing: 2px;
     }
 
@@ -929,9 +949,9 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        width: 100%; 
-       /*  font-family: 'Nunito', cursive; */
-        font-family: 'Operator Mono', cursive; 
+        width: 100%;
+        /* font-family: 'Nunito', cursive; */
+        font-family: 'Operator Mono', cursive;  
         /* font-family: 'Handlee', cursive; */
         font-size: 21px;
         font-weight: bold;
@@ -1027,22 +1047,10 @@
         body {
             zoom: 50%;
         }
-
-        #navright{
-            display: none;
-        }
     }
 
     @media all and (max-width: 800px) and (min-width: 450px)
-    {   
-        #navright{
-            display: none;
-        }
-
-        #navitem a{
-            font-size: smaller;
-        }
-    
+    {
         .albumcontainer{
             grid-template-columns: repeat(1, 500px);
         }
@@ -1068,8 +1076,8 @@
         }
 
         .currentsongexpand {
-                scale: 2;
-                transform: translateY(-29px);
+                scale: 2.2;
+                transform: translateY(-33px);
         }
     }
 
@@ -1087,8 +1095,8 @@
             scale: 1.7;
             transform: translateY(-22px);
         }
-       
-       .musicplayer{
+
+        .musicplayer{
             margin: 0px;
         }
     }
@@ -1097,6 +1105,14 @@
     {
         #logo {
             display: none;
+        }
+
+        #navright{
+            display: none;
+        }
+
+        #navitem a{
+            font-size: smaller;
         }
         
         .albumbox{
@@ -1128,6 +1144,5 @@
             transform: none;
         }
     }
-
 
 /* End */
