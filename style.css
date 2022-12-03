@@ -822,7 +822,7 @@
         justify-content: center;
         color: black;
         background: gainsboro;
-        border: 2px solid red;
+        border: 3px double #1DB954 ;
         border-radius: 10px;
         /* box-shadow: rgba(200, 200, 212, 0.527) 0px 4px 16px, rgba(188, 188, 200, 0.888) 0px 8px 24px, rgba(200, 200, 212, 0.527) 0px 16px 56px; */
         box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
