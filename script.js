@@ -43,6 +43,9 @@ let songItems = Array.from(document.getElementsByClassName('songItem'));
 // ]
 
 
+invertcolor();
+
+
 // audioElement.src=songs[songIndex].filepath;                                                      // Reading Songs from Song Array
 
 let music_filepath = document.getElementsByClassName('songfilepath')[songIndex].src;                // Reading Audio File from DOM
@@ -356,47 +359,55 @@ let expanded = 0;
 
 // Page Color Invertion
 
-let invrt = document.getElementById('invrt');
-let rootelement = document.querySelector("*");
-let allimgs = document.getElementsByTagName('img');
+    function invertcolor() {
 
-// console.log(allimgs);
-// console.log(rootelement);
-// rootelement.classList.add('invrt');
+        let invrt = document.getElementById('invrt');
+        let rootelement = document.querySelector("*");
+        let allimgs = document.getElementsByTagName('img');
 
-let inverted = 0;
-invrt.addEventListener('click', ()=>{
+        // console.log(allimgs);
+        // console.log(rootelement);
+        // rootelement.classList.add('invrt');
 
-    if(inverted == 0)
-    {
-        rootelement.style.filter = "invert(100%)";
-        // rootelement.classList.add('invert');
-        inverted = 1;
-        invrt.children[0].src = "images/lightbulb-regular.svg"
+        let inverted = 0;
+        invrt.addEventListener('click', ()=>{
 
-        for(p=0; p<=allimgs.length; p++)
-        {
-            document.getElementsByTagName('img')[p].style.filter = "invert(100%)";
-            // console.log(p);
-            // console.log(document.getElementsByTagName('img')[p]);
-        }
+            if(inverted == 0)
+            {
+                rootelement.style.filter = "invert(100%)";
+                // rootelement.classList.add('invert');
+                inverted = 1;
+                invrt.children[0].src = "images/lightbulb-regular.svg"
+
+                for(p=0; p<=allimgs.length; p++)
+                {
+                    document.getElementsByTagName('img')[p].style.filter = "invert(100%)";
+                    // console.log(p);
+                    // console.log(document.getElementsByTagName('img')[p]);
+                }
+            }
+            
+            else if (inverted == 1)
+            {
+                rootelement.style.filter = "invert(0%)";
+                // rootelement.classList.remove('invert');
+                inverted = 0;
+                invrt.children[0].src = "images/lightbulb-solid.svg"
+
+                for(p=0; p<=allimgs.length; p++)
+                {
+                    document.getElementsByTagName('img')[p].style.filter = "invert(0%)";
+                    // console.log(p);
+                    // console.log(document.getElementsByTagName('img')[p]);
+                }
+            }
+
+        })
+
     }
-    else if (inverted == 1)
-    {
-        rootelement.style.filter = "invert(0%)";
-        // rootelement.classList.remove('invert');
-        inverted = 0;
-        invrt.children[0].src = "images/lightbulb-solid.svg"
 
-        for(p=0; p<=allimgs.length; p++)
-        {
-            document.getElementsByTagName('img')[p].style.filter = "invert(0%)";
-            // console.log(p);
-            // console.log(document.getElementsByTagName('img')[p]);
-        }
-    }
 
-})
+// Tracks Timer
 
 
 // Current Duration timer
@@ -490,6 +501,8 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
 
 
 
+
+
 songobj =   { 
     songName: music_title,
     albumName: music_album,
@@ -500,3 +513,4 @@ songobj =   {
 
 
 // console.log(songobj);
+
