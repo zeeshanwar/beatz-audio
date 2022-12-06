@@ -700,7 +700,7 @@
 
     .heading:hover{
         letter-spacing: 22px;
-        cursor: grab;
+        cursor: grabbing;
         /* border: 5px double #FF7777;
         padding: 100px;
         border-radius: 10px; */
@@ -978,7 +978,7 @@
     #current-songcover{
         width: 136px;
         height: 136px;
-        cursor: pointer;
+        cursor: grab;
         border-radius: 3px;
     }
 
