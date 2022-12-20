@@ -105,7 +105,7 @@ function songdetails() {
  
     masterplay.addEventListener('click', () => {
         playpause();
-})
+    })
 
     document.addEventListener('keypress', function (e) 
     {
@@ -363,6 +363,8 @@ let expanded = 0;
     function invertcolor() {
 
         let invrt = document.getElementById('invrt');
+        let dark_light = document.getElementById('dark-light');
+        
         let rootelement = document.querySelector("*");
         let allimgs = document.getElementsByTagName('img');
 
@@ -378,7 +380,11 @@ let expanded = 0;
                 rootelement.style.filter = "invert(100%)";
                 // rootelement.classList.add('invert');
                 inverted = 1;
-                invrt.children[0].src = "images/lightbulb-regular.svg"
+                // invrt.children[0].src = "images/lightbulb-regular.svg"
+                // invrt.children[0].innerHTML = `<i class="bi bi-moon-stars-fill fa-2x"></i>`
+                dark_light.classList.remove('bi-sun');
+                dark_light.classList.add('bi-brightness-low-fill');
+                dark_light.style.filter = "invert(100%)";
                 invrt.setAttribute("title", "Switch to Dark Mode");
 
                 for(p=0; p<=allimgs.length; p++)
@@ -394,7 +400,11 @@ let expanded = 0;
                 rootelement.style.filter = "invert(0%)";
                 // rootelement.classList.remove('invert');
                 inverted = 0;
-                invrt.children[0].src = "images/lightbulb-solid.svg"
+                // invrt.children[0].src = "images/lightbulb-solid.svg"
+                dark_light.classList.remove('bi-brightness-low-fill');
+                dark_light.classList.add('bi-sun');
+                // dark_light.classList.add('bi-sun-fill');
+                dark_light.style.filter = "invert(0%)";
                 invrt.setAttribute("title", "Switch to Light Mode");
 
                 for(p=0; p<=allimgs.length; p++)
@@ -408,6 +418,7 @@ let expanded = 0;
         })
 
     }
+
 
 
 // Tracks Timer
@@ -581,8 +592,6 @@ songobj =   {
 
 
 
-
-
 // audioElement.src=songs[songIndex].filepath;                                                    // Reading Songs from Song Array
 
 
@@ -624,6 +633,7 @@ songobj =   {
         // document.getElementById('music-artist').innerHTML = music_artist;
         // music_cover.src = songs[songIndex].albumart;
         //  let currentcover = document.getElementById('songcover').src;
+
 
 
 
