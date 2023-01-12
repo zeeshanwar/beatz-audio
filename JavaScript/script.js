@@ -308,7 +308,6 @@ trackshuffle.addEventListener('click', ()=> {
                 audioElement.playbackRate = fast;                                               // Setting Normal Playback to Fast
                 playspeed.classList.remove('fa-face-smile');
                 playspeed.classList.add('fa-face-dizzy');
-                playspeed.setAttribute("title", "Speed Fast. Click to Change to Slow");
             }
             
             else if(audioElement.playbackRate == fast)
@@ -316,7 +315,6 @@ trackshuffle.addEventListener('click', ()=> {
                 audioElement.playbackRate = slow;                                               // Setting Fast Playback to Slow
                 playspeed.classList.remove('fa-face-dizzy');
                 playspeed.classList.add('fa-face-surprise');
-                playspeed.setAttribute("title", "Speed: Slow. Click to Change to Normal");
             }
             
             else if(audioElement.playbackRate == slow)
@@ -324,7 +322,6 @@ trackshuffle.addEventListener('click', ()=> {
                 audioElement.playbackRate = normal;                                             // Setting Slow Playback to Normal
                 playspeed.classList.remove('fa-face-surprise');
                 playspeed.classList.add('fa-face-smile');
-                playspeed.setAttribute("title", "Speed: Normal. Click to Change to Fast");
             }
             // document.getElementsByClassName('playbackspeed')[0].style.color = "crimson";
         })
@@ -379,7 +376,6 @@ let expanded = 0;
                 // rootelement.classList.add('invert');
                 inverted = 1;
                 invrt.children[0].src = "images/lightbulb-regular.svg"
-                invrt.setAttribute("title", "Toogle to Dark Mode");
 
                 for(p=0; p<=allimgs.length; p++)
                 {
@@ -395,7 +391,6 @@ let expanded = 0;
                 // rootelement.classList.remove('invert');
                 inverted = 0;
                 invrt.children[0].src = "images/lightbulb-solid.svg"
-                invrt.setAttribute("title", "Toogle to Light Mode");
 
                 for(p=0; p<=allimgs.length; p++)
                 {
