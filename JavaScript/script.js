@@ -308,6 +308,7 @@ trackshuffle.addEventListener('click', ()=> {
                 audioElement.playbackRate = fast;                                               // Setting Normal Playback to Fast
                 playspeed.classList.remove('fa-face-smile');
                 playspeed.classList.add('fa-face-dizzy');
+                playspeed.setAttribute("title", "Change Playback Speed to Fast");
             }
             
             else if(audioElement.playbackRate == fast)
@@ -315,6 +316,7 @@ trackshuffle.addEventListener('click', ()=> {
                 audioElement.playbackRate = slow;                                               // Setting Fast Playback to Slow
                 playspeed.classList.remove('fa-face-dizzy');
                 playspeed.classList.add('fa-face-surprise');
+                playspeed.setAttribute("title", "Change Playback Speed to Slow");
             }
             
             else if(audioElement.playbackRate == slow)
@@ -322,6 +324,7 @@ trackshuffle.addEventListener('click', ()=> {
                 audioElement.playbackRate = normal;                                             // Setting Slow Playback to Normal
                 playspeed.classList.remove('fa-face-surprise');
                 playspeed.classList.add('fa-face-smile');
+                playspeed.setAttribute("title", "Change Playback Speed to Normal");
             }
             // document.getElementsByClassName('playbackspeed')[0].style.color = "crimson";
         })
