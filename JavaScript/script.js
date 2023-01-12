@@ -375,7 +375,7 @@ let expanded = 0;
                 rootelement.style.filter = "invert(100%)";
                 // rootelement.classList.add('invert');
                 inverted = 1;
-                invrt.children[0].src = "/images/lightbulb-regular.svg"
+                invrt.children[0].src = "images/lightbulb-regular.svg"
 
                 for(p=0; p<=allimgs.length; p++)
                 {
@@ -390,7 +390,7 @@ let expanded = 0;
                 rootelement.style.filter = "invert(0%)";
                 // rootelement.classList.remove('invert');
                 inverted = 0;
-                invrt.children[0].src = "/images/lightbulb-solid.svg"
+                invrt.children[0].src = "images/lightbulb-solid.svg"
 
                 for(p=0; p<=allimgs.length; p++)
                 {
