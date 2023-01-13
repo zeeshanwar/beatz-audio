@@ -308,7 +308,7 @@ trackshuffle.addEventListener('click', ()=> {
                 audioElement.playbackRate = fast;                                               // Setting Normal Playback to Fast
                 playspeed.classList.remove('fa-face-smile');
                 playspeed.classList.add('fa-face-dizzy');
-                playspeed.setAttribute("title", "Speed Fast. Click to Change to Slow");
+                playspeed.setAttribute("title", "Speed: Fast. Click to Change to Slow");
             }
             
             else if(audioElement.playbackRate == fast)
