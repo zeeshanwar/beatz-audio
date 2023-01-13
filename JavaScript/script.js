@@ -379,7 +379,7 @@ let expanded = 0;
                 // rootelement.classList.add('invert');
                 inverted = 1;
                 invrt.children[0].src = "images/lightbulb-regular.svg"
-                invrt.setAttribute("title", "Toogle to Dark Mode");
+                invrt.setAttribute("title", "Switch to Dark Mode");
 
                 for(p=0; p<=allimgs.length; p++)
                 {
