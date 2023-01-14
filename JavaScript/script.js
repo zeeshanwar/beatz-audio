@@ -395,7 +395,7 @@ let expanded = 0;
                 // rootelement.classList.remove('invert');
                 inverted = 0;
                 invrt.children[0].src = "images/lightbulb-solid.svg"
-                invrt.setAttribute("title", "Switch to Light Mode");
+                invrt.setAttribute("title", "Toogle to Light Mode");
 
                 for(p=0; p<=allimgs.length; p++)
                 {
