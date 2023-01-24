@@ -53,6 +53,10 @@
   opacity: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   zoom: 70%;
   font-family: Bookman Old Style;
