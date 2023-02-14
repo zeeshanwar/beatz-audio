@@ -34,6 +34,10 @@
   /* color: var(--invertvalue); */
 }
 
+a {
+  text-decoration: none;
+}
+
 /* ScrollBar */
 ::-webkit-scrollbar {
   width: 10px;
